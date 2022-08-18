@@ -1,0 +1,4 @@
+APP_DB="database"
+APP_PORT = 8000
+APP_SECRET="qwertyuiop"
+ORIGINS="http://localhost:3000"
