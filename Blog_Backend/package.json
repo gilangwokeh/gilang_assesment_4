@@ -2,10 +2,9 @@
   "name": "blog_backend",
   "version": "1.0.0",
   "description": "this is a web blog assignment 4 for salt academy.",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.js"
+    "start": "nodemon --exec ts-node src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -22,5 +21,20 @@
     "nodemon": "^2.0.19",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/body-parser": "^1.19.2",
+    "@types/consola": "^2.2.5",
+    "@types/cors": "^2.8.12",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/mongoose": "^5.11.97",
+    "@types/nodemon": "^1.19.2",
+    "@types/passport": "^1.0.10",
+    "@types/passport-jwt": "^3.0.6",
+    "ts-node": "^10.9.1"
+
   }
 }

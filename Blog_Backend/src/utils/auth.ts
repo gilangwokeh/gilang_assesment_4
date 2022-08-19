@@ -1,11 +1,10 @@
 const bcrypt = require('bcryptjs');
 const jwt = require("jsonwebtoken");
-const passport = require("passport");
-const User = require("../models/User");
-const { SECRET } = require("../config/index");
-
-
-const userRegister = async (userDets, role, res) => {
+import express,{ Response ,Request } from 'express'
+import UserSchema from '../models/User';
+import passport from 'passport';
+import Config from '../config';
+const userRegister = async (userDets : any, role : String, res : Response) => {
   try {
     //Validate the username
     let usernameNotTaken = await (ValidateUsername(userDets.username))
@@ -24,7 +23,7 @@ const userRegister = async (userDets, role, res) => {
     }
     const password = await bcrypt.hash(userDets.password, 12);
     //create a new user
-    const newUser = new User({
+    const newUser = new UserSchema({
       ...userDets,
       password,
       role
@@ -42,9 +41,9 @@ const userRegister = async (userDets, role, res) => {
   }
 }
 
-const userLogin = async (userCreds, role, res) => {
+const userLogin = async (userCreds : any, role : String, res : any) => {
   let { username, password } = userCreds;
-  const user = await User.findOne({ username });
+  const user = await UserSchema.findOne({ username });
   if (!user) {
     return res.status(404).json({
       message: "username is not found.invalid login credentials",
@@ -66,7 +65,7 @@ const userLogin = async (userCreds, role, res) => {
         role: user.role,
         username: user.username,
         email: user.email
-      }, SECRET, { expiresIn: "1h" });
+      }, Config.SECRET, { expiresIn: "1h" });
     let result = {
       username: user.username,
       role: user.role,
@@ -86,7 +85,7 @@ const userLogin = async (userCreds, role, res) => {
     })
   }
 }
-const userAuth = passport.authenticate('jwt', { session: false });
+// const userAuth = passport.authenticate('jwt', { session: false });
 // const checkRole = roles => (res, req,next)=>{
 //   if(roles.includes(req.user.role)){
 //    return next();
@@ -98,16 +97,16 @@ const userAuth = passport.authenticate('jwt', { session: false });
 //   }
 // }
 
-const ValidateUsername = async username => {
-  let user = await User.findOne({ username })
+const ValidateUsername = async (username : String) => {
+  let user = await UserSchema.findOne({ username })
   return user ? false : true
 }
-const ValidateEmail = async email => {
-  let user = await User.findOne({ email })
+const ValidateEmail = async (email : String ) => {
+  let user = await UserSchema.findOne({ email })
   return user ? false : true
 }
 
-const serializeUser = user => {
+const serializeUser = (user : any) => {
   return {
     username: user.username,
     email: user.email,
@@ -117,9 +116,5 @@ const serializeUser = user => {
     createdAd: user.createdAd
   };
 };
-module.exports = {
-  userAuth,
-  userRegister,
-  userLogin,
-  serializeUser,
-}
+
+export { userRegister , userLogin , serializeUser}
