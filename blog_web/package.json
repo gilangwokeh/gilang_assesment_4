@@ -3,15 +3,14 @@
   "version": "0.1.0",
   "description": "Blog Gilang Create reactjs with typescript",
   "private": true,
-  "main": "index.js",
+  "main": "index.ts",
   "author": "gilangwokeh <gilangwokeh12@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build:staging" : "env-cmd -f , env.staging npm run build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -30,6 +29,7 @@
     ]
   },
   "dependencies": {
+    "@auth0/auth0-react": "^1.10.2",
     "@hookform/resolvers": "^2.9.7",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",

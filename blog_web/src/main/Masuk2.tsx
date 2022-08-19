@@ -8,6 +8,7 @@ const Masuk2 = () => {
     const parsedItem = JSON.parse(String(savedItem))
     return parsedItem || "" ;
   })
+  const [password, setPasword] = useState("")
   let navigate = useNavigate()
 
   useEffect(()=>{
@@ -28,7 +29,7 @@ const Masuk2 = () => {
          <p>Masuk Member</p>
           <input type="input" placeholder='username' className='username' required value={username} onChange={(e) => setUsername(e.target.value)}/>
           <br />
-          <input className='password 'type="password" placeholder='KataSandi' required />
+          <input className='password 'type="password" placeholder='KataSandi' required value={password} onChange={(e) => setPasword(e.target.value)} />
           <br />
           <button type='submit' onClick={()=>navigate("/HalamanUtama", { replace: true })}>Masuk</button>
           <ul>
