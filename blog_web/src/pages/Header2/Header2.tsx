@@ -17,14 +17,10 @@ const Header2 = () => {
     </p>
          <ul className={active}>
             <li className="nav_item">
-              <NavLink to="/HalamanUtama" className="nav_link">
-                Halaman utama
-              </NavLink>
+              <NavLink to="/HalamanUtama" className="nav_link">Halaman utama</NavLink>
               </li>
             <li className="nav_item">
-              <NavLink to="#" className="nav_link">
-                Halaman Lain
-              </NavLink>
+                <NavLink to="#" className="nav_link">Halaman Lain</NavLink>
               <ul>
                 <li><NavLink to="/Jogging">Jogging</NavLink></li>
                 <li><NavLink to="/Olahraga">olahraga</NavLink></li>
@@ -34,14 +30,10 @@ const Header2 = () => {
               </ul>
             </li>
             <li className="nav_item">
-             <NavLink to="/Kontak" className="nav_link">
-                Kontak
-            </NavLink>
+             <NavLink to="/Kontak" className="nav_link">Kontak</NavLink>
               </li>
               <li className="nav_item">
-             <NavLink to="/" className="nav_link">
-                Keluar
-            </NavLink>
+             <NavLink to="/" className="nav_link">Keluar</NavLink>
               </li>
          </ul>
       <div className={toggleIcon} onClick={navToggle}>

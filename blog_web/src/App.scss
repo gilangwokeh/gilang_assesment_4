@@ -33,48 +33,35 @@
       }
     }
     .item-1{
-      ul {
+      .facebook1{
+        width: 50px;
         position: fixed;
-        li {
-          display: flex;
-          flex-direction: column;
-          list-style: none;
-          .fb {
-            position: relative;
-            left: -50px;
-            width: 150px;
-            background-color: rgb(50, 126, 192);
-            height: 50px;
-          }
-          .fb:hover, .twitter:hover ,.Linkend:hover ,.instagram:hover{
-            cursor: pointer;
-            color: black;
-            background: rgba(0,0,0,0.1);
-          }
-          .twitter {
-            position: relative;
-            left: -50px; 
-            width: 150px;
-            height: 50px;
-            background-color: #0e0bbe;         
-           }
-           .Linkend {
-            top: -2px;
-            position: relative;
-            left: -50px; 
-            width: 150px;
-            height: 50px;
-            background-color: #0e76a8;  
-           }
-           .instagram {
-            top: -3px;
-            position: relative;
-            left: -50px;
-            width: 150px;
-            height: 50px;
-            background-color: #c13584;
-           }
-        }
+        top: 120px;
+      }
+      .facebook1:hover {
+        width: 70px;
+        height: 50px;
+        transition: all 0.32s;
+      }
+      .instagram1 {
+        width: 50px;
+        position: fixed;
+        top: 170px;
+      }
+      .instagram1:hover {
+        width: 70px;
+        height: 50px;
+        transition: all 0.32s;
+      }
+      .lingkend1 {
+        width: 50px;
+        position: fixed;
+        top: 220px;
+      }
+      .lingkend1:hover {
+        width: 70px;
+        height: 50px;
+        transition: all 0.32s;
       }
     }
     .item-2 {
@@ -94,20 +81,69 @@
       font-size: 25px;
       position: relative;
       left: 200px;
-
-      p {
-        padding-bottom: 20px;
+      .text-title {
+        margin-left: -220px;
+      }
+      .contact2 {
+        label {
+          display: flex;
+          flex-direction: column;
+          input {
+            border-radius: 10px;
+            height: 40px;
+            width: 400px;
+            color: white;
+            margin-top: 20px;
+            background-color: rgb(41, 36, 36);
+          }
+          input::placeholder {
+            padding-left: 20px;
+          }
+          input:hover {
+            background-color: white;
+            color: black;
+          }
+          textarea {
+            width: 400px;
+            margin-top: 20px;
+            border-radius: 10px;
+            height: 100px;
+            color: white;
+            margin-top: 20px;
+            background-color: rgb(41, 36, 36);
+          }
+          textarea::placeholder {
+            padding-left: 20px;
+            padding-top: 40px;
+          }
+          textarea:hover {
+            background-color: white;
+            color: black;
+          }
+          button {
+            border-radius: 10px;
+            height: 40px;
+            width: 400px;
+            color: white;
+            margin-top: 20px;
+            background-color: rgb(41, 36, 36);
+          }
+          button:hover {
+            background-color: white;
+            color: black;
+          }
+        }
       }
     }
     iframe {
       width: 530px;
       height: 300px;
       position: relative;
-      left: 220px;
+      left: 130px;
     }
     .alamat-1{
       position: relative;
-      left: 17px;
+      left: -70px;
     }
     .header-li {
       padding-top: 10px;
@@ -120,7 +156,7 @@
       width: 500px;
       text-align: justify;
       position: relative;
-      left: 302px;
+      left: 192px;
     }
     .item-3 {
       margin-bottom: 20px;
@@ -173,6 +209,9 @@
       font-size: 30px;
       position: relative;
       top: 20px;
+    }
+    ::placeholder {
+      padding-left: 20px;
     }
     .from-ul4 {
       padding-bottom: 12220px;
@@ -268,6 +307,10 @@
           top: 40px;
           left: -20px;
         }
+        input:hover {
+          background-color: white;
+          color: black;
+        }
       }
     }
   }
@@ -354,6 +397,13 @@
     left: 20px;
     border-radius: 30px;
     background-color: #d0d9d5;
+  }
+  input::placeholder {
+    padding-left: 20px;
+  }
+  input:hover {
+    background-color: white;
+    color: black;
   }
   .password {
     position: absolute;
