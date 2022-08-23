@@ -1,7 +1,7 @@
 import React from 'react'
 import Header2 from '../Header2/Header2';
 import Search from '../Search';
-import Footer from '../Footer';
+import Footer2 from '../Footer/Footer2';
 import Halaman1 from '../../main/Halaman1';
 const HalamanUtama = () => {
   return (
@@ -9,7 +9,7 @@ const HalamanUtama = () => {
     <Search/>
      <Header2/>
      <Halaman1/>
-     <Footer/>
+     <Footer2/>
     </React.Fragment>
   )
 }

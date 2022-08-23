@@ -1,57 +1,69 @@
-import React,{  useEffect, useState , SyntheticEvent} from 'react'
-import {Link ,useNavigate  } from 'react-router-dom';
+import React, { useEffect, useState , Fragment} from 'react'
+import { Link, Navigate} from 'react-router-dom';
 import axios from "axios";
 import Users from '../config/Users';
 const Masuk2 = () => {
 
-    //define state
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+  //define state
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState("");
+  const [navigate,setNavigate] = useState(false);
+  const [error,setError] = useState('')
 
-    //define state validation
-
-    //define history
-    const navigate = useNavigate();
-
-    //function "loginHanlder"
-    const loginHandler = async (e : any) => {
-        e.preventDefault();
-        if(username || password){
-          localStorage.setItem('LOGIN', JSON.stringify(username));
-          return navigate('/HalamanUtama')
- 
-        }
-        // await axios.post('http://localhost:8000/users/login-user')
-        // // send data to server
-        // .then((response) => {
-
-        //     //set token on localStorage
-        //     localStorage.setItem('LOGIN', "local");
-
-        //     //redirect to dashboard
-        //   })
-        // .catch((error) => {
-        //   console.log("error")
-        // })
-    };
+  const onChangeUsername = (e : any) => {
+    const value = e.target.value
+    setUsername(value)
+    setError('')
+  }
+  const onChangePassword = (e : any) => {
+    const value = e.target.value
+    setPassword(value)
+    setError('')
+  }
+  const submitLogin = (e : any) => {
+    e.preventDefault();
+    const data = {
+      username : username,
+      password : password
+    }
+    axios.post("http://localhost:8000/api/users/login-user", data)
+    .then(login=>{
+      if(login){
+        localStorage.setItem('token',login.data.token)
+        setNavigate(true)
+      }
+    })
+    .catch((e)=>setError(e.response.data.message))
+  }
   return (
-    <React.Fragment>
+    <Fragment>
+      <div>
+      {
+        navigate  && (
+          <Navigate to="/HalamanUtama"/>
+         )
+      }
+      </div>
       <img className='image-register' src="./Pegunungan.jpg" alt="" />
-       <form className='Login'>
-         <label>
-         <p>Masuk Member</p>
-          <input type="input" placeholder='username' className='username' required value={username} onChange={(e) => setUsername(e.target.value)}/>
+      <form className='Login'>
+        {
+          error && (
+            <p className='error'>{error}</p>
+          )
+        }
+        <label>
+          <p>Masuk Member</p>
+          <input type="input" placeholder='username' className='username' required value={username} onChange={onChangeUsername} />
           <br />
-          <input className='password 'type="password" placeholder='KataSandi' required value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input className='password ' type="password" placeholder='KataSandi' required value={password} onChange={onChangePassword} />
           <br />
-          <button type='submit' onClick={loginHandler}>Masuk</button>
+          <button type='submit' onClick={submitLogin}>Masuk</button>
           <ul>
             <li><Link to='./Pendaftaran'>Pendaftaran Member Blog</Link></li>
           </ul>
         </label>
-    </form>
-    
-    </React.Fragment>
+      </form>
+    </Fragment>
   )
 }
 

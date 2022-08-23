@@ -31,19 +31,7 @@ router.post("/login-admin", (req, res) => __awaiter(void 0, void 0, void 0, func
     yield res.set('Access-Control-Allow-Origin', '*');
     yield (0, auth_1.userLogin)(req.body, "admin", res);
 }));
-// //profille route
-// router.get("/profile", userAuth, async (req : Request, res : Response) => {
-//   await res.set('Access-Control-Allow-Origin', '*');
-//   return res.json(serializeUser(req.user))
-// })
-// //Users Proctected Route
-// router.get("/user-protect", userAuth, async (req : Request, res : Response) => { 
-//   await res.set('Access-Control-Allow-Origin', '*');
-//   return res.json("hello user")
-// })
-// //admin  Proctected Router 
-// router.get("/admin-protect", userAuth, async (req : Request, res : Response) => { 
-//   await res.set('Access-Control-Allow-Origin', '*');
-//   return res.json("hello admin")
-// })
+router.get("/array", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    res.send("hello word");
+}));
 module.exports = router;

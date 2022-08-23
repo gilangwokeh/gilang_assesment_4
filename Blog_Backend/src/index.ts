@@ -10,11 +10,9 @@ const app = exprees();
 app.use(cors());
 
 app.use(body.json());
-// app.use(passport.initialize());
-// require("./middleware/passport")(passport)
 
 //user middleware
-app.use("/users", require('./routes/users'))
+app.use("/api/users", require('./routes/users'))
 const startApp = async () => {
   try {
     await connect(Config.DB_mongodb, { useUnifiedTopology: true, useNewUrlParser: true })

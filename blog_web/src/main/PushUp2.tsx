@@ -1,7 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link ,Navigate } from 'react-router-dom';
 
 const PushUp2 = () => {
+  const token = localStorage.getItem('token')
+  if(!token){
+   return <Navigate to="/"/>
+  }
   return (
     <React.Fragment>
       <div className='grid-container'>
@@ -14,7 +18,7 @@ const PushUp2 = () => {
           <h3 className="header-title-article">PUSH UP</h3>
           <img className='img-olahraga' src="./pushUp.jpg" alt="" />
           <p className='paraghragh-text'>Tolak angkat (bahasa Inggris: push-up) adalah jenis senam kekuatan yang berfungsi untuk menguatkan otot biseps maupun triseps. Posisi awal tidur tengkurap dengan tangan di sisi kanan kiri badan. Kemudian, badan didorong ke atas dengan kekuatan tangan. Posisi kaki dan badan tetap lurus atau tegap. Setelah itu, badan diturunkan dengan tetap menjaga kondisi badan dan kaki tetap lurus. Badan turun tanpa menyentuh lantai atau tanah. Naik lagi dan dilakukan secara berulang. Kegiatan ini dapat dikombinasikan dengan:</p>
-          <ol>
+          <ol className='pushup3'>
             <p>1.mengubah jarak telapak tangan</p>
             <p>2.bentuk tangan yang menyentuh lantai: membuka, mengepal, menggunakan jari, atau punggung tangan</p>
             <p>3.mengubah jarak  antarkaki</p>

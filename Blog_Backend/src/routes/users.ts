@@ -1,6 +1,7 @@
 import express,{ Response ,Request } from 'express'
 const router = require('express').Router();
 import { userRegister , userLogin , serializeUser}  from '../utils/auth'
+import Users from "../models/User"
 //Users Registeration Route
 router.post("/register-user", async (req : Request, res : Response) => {
   await res.set('Access-Control-Allow-Origin', '*');
@@ -25,28 +26,9 @@ router.post("/login-admin", async (req : Request, res : Response) => {
   await res.set('Access-Control-Allow-Origin', '*');
   await userLogin(req.body, "admin", res);
 })
-
-
-// //profille route
-// router.get("/profile", userAuth, async (req : Request, res : Response) => {
-//   await res.set('Access-Control-Allow-Origin', '*');
-//   return res.json(serializeUser(req.user))
-// })
-
-// //Users Proctected Route
-
-// router.get("/user-protect", userAuth, async (req : Request, res : Response) => { 
-//   await res.set('Access-Control-Allow-Origin', '*');
-//   return res.json("hello user")
-// })
-
-// //admin  Proctected Router 
-// router.get("/admin-protect", userAuth, async (req : Request, res : Response) => { 
-//   await res.set('Access-Control-Allow-Origin', '*');
-//   return res.json("hello admin")
-
-// })
-
+router.get("/array", async (req : Request ,res : Response) => {
+  res.send("hello word")
+})
 
 module.exports = router
 

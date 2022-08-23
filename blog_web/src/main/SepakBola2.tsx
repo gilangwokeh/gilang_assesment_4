@@ -1,7 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link , Navigate } from 'react-router-dom';
 
 const SepakBola2 = () => {
+  const token = localStorage.getItem('token')
+  if(!token){
+   return <Navigate to="/"/>
+  }
   return (
     <React.Fragment>
       <div className='grid-container'>

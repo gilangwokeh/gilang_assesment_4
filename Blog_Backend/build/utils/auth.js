@@ -57,7 +57,7 @@ const userLogin = (userCreds, role, res) => __awaiter(void 0, void 0, void 0, fu
     const user = yield User_1.default.findOne({ username });
     if (!user) {
         return res.status(404).json({
-            message: "username is not found.invalid login credentials",
+            message: "Pengguna Tidak di Temukan",
             success: false
         });
     }

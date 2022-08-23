@@ -46,7 +46,7 @@ const userLogin = async (userCreds : any, role : String, res : any) => {
   const user = await UserSchema.findOne({ username });
   if (!user) {
     return res.status(404).json({
-      message: "username is not found.invalid login credentials",
+      message: "Pengguna Tidak di Temukan",
       success: false
     })
   }

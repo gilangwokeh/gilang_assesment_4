@@ -1,6 +1,10 @@
 import React from 'react'
-
+import { Navigate } from 'react-router-dom'
 const Kontak2 = () => {
+  const token = localStorage.getItem('token')
+  if(!token){
+   return <Navigate to="/"/>
+  }
   return (
    <React.Fragment>
    <h4 className="contact">Kontak Pribadi</h4>
@@ -8,7 +12,7 @@ const Kontak2 = () => {
         <div className="item-informasi">
             <h1 className="text-title">Kirim Pesan :</h1>
             <form className='contact2'>
-              <label htmlFor="">
+              <label>
                 <input type="input" placeholder='Nama Anda' />
                 <input type="input" placeholder='Email Anda'/>
                 <input type="input" placeholder='Nomor Telp Anda'/>

@@ -36,7 +36,7 @@
       .facebook1{
         width: 50px;
         position: fixed;
-        top: 120px;
+        top: 220px;
       }
       .facebook1:hover {
         width: 70px;
@@ -46,7 +46,7 @@
       .instagram1 {
         width: 50px;
         position: fixed;
-        top: 170px;
+        top: 270px;
       }
       .instagram1:hover {
         width: 70px;
@@ -56,7 +56,7 @@
       .lingkend1 {
         width: 50px;
         position: fixed;
-        top: 220px;
+        top: 320px;
       }
       .lingkend1:hover {
         width: 70px;
@@ -70,8 +70,8 @@
       position: relative;
       margin-left: 200px;
       .img-olahraga {
-        width: 100%;
-        height: auto;
+        max-width: 100%;
+        max-height: 400px;
       }
     }
     .text-halaman1 {
@@ -148,7 +148,7 @@
     .header-li {
       padding-top: 10px;
       padding-bottom: 20px;
-      .paragragh-1 {
+      p {
         padding-bottom: 10px;
       }
     }
@@ -194,7 +194,7 @@
     height: auto;
   }
   .formulir2 {
-    background-color: rgb(43, 34, 34);
+    background-color: black;
     color: white;
     position: absolute;
     top: 200px;
@@ -203,7 +203,6 @@
     height: 480px;
     border-radius: 20px;
     margin-bottom: 150px;
-    box-shadow: 5px 20px 20px rgba(0,0,0,0.8);
     .Form-paragraph {
       text-align: center;
       font-size: 30px;
@@ -212,12 +211,6 @@
     }
     ::placeholder {
       padding-left: 20px;
-    }
-    .from-ul4 {
-      padding-bottom: 12220px;
-      li {
-        text-decoration: none;
-      }
     }
     button {
       position: absolute;
@@ -268,36 +261,6 @@
       li {
         list-style: none;
         margin-bottom: 20px;
-        .invalid-feedback13 {
-          color: red;
-          position: relative;
-          top: 50px;
-          left: -20px;
-        }
-        .invalid-feedback14 {
-          color: red;
-          position: relative;
-          top: 50px;
-          left: -20px;
-        }
-        .invalid-feedback15 {
-          color: red;
-          position: relative;
-          top: 50px;
-          left: -20px;
-        }
-        .invalid-feedback16 {
-          color: red;
-          position: relative;
-          top: 50px;
-          left: -20px;
-        }
-        .invalid-feedback17 {
-          color: red;
-          position: relative;
-          top: 50px;
-          left: -20px;
-        }
         input {
           width: 360px;
           height: 50px;
@@ -370,17 +333,10 @@
   height: 330px;
   border-radius: 20px;
   box-shadow: 5px 20px 20px rgba(0,0,0,0.8);
-  .invalid-feedback1{
+  .error {
     color: red;
     position: relative;
-    top: 100px;
-    left: 30px;
-  }
-  .invalid-feedback2{
-    color: red;
-    position: relative;
-    top: 145px;
-    left: 30px;
+    top: 13px;
   }
   p {
     text-align: center;
@@ -634,6 +590,10 @@
       margin-left: -150px;
       width: 600px;
     }
+    .header-title-article {
+      margin-left: -90px;
+      margin-bottom: 20px;
+    }
     .paraghragh-text {
       text-align: justify;
       font-size: 20px;
@@ -733,30 +693,277 @@
    
 }
 @media (max-width: 414px) {
+  .image-register {
+    height: 20000px;
+  }
+  .paragraph-daftar {
+    font-size: 7px;
+    margin-left: -60px;
+  }
   .formulir2 {
-    margin-left: -500px;
+    max-width: 260px;
+    margin-left: -420px;
+    margin-top: -90px;
+    max-height: 170px;
+    z-index: 999;
+    label {
+      .Form-paragraph {
+        font-size: 12px;
+      }
+      ul {
+        li {
+          .username {
+            width: 200px;
+            position: relative;
+            height: 15px;
+            top: 35px;
+          }
+          .nama {
+            width: 200px;
+            position: relative;
+            height: 15px;
+            top: 4px;
+          }
+          .email-2 {
+            width: 200px;
+            position: relative;
+            height: 15px;
+            top: 20px;
+          }
+          .password {
+            width: 200px;
+            position: relative;
+            height: 15px;
+            top: -9px;
+
+          }
+          .no-ktp {
+            width: 200px;
+            height: 15px;
+            position: relative;
+            top: -25px;
+
+          }
+        }
+      }
+      button {
+        width: 200px;
+        height: 20px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .text-advantages {
+    width: 334px;
+    height: 50px;
+    margin-left: 10px;
+    position: relative;
+    p {
+      font-size: 10px;
+      margin-left: 0;
+    }
+  }
+  .text-advantages:hover {
+    width: 360px;
+    height: 70px;
+    p{
+      font-size: 12px;
+      margin-left: 0;
+    }
+  }
+  .text-deficiency {
+    margin-top: -40px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    width: 334px;
+    height: 50px;
+    position: relative;
+    p {
+      font-size: 8px;
+      margin-left: 0;
+    }
+  }
+  .text-deficiency:hover {
+    width: 360px;
+    height: 60px;
+    p{
+      font-size: 10px;
+      margin-left: 0;
+      width: 100%;
+    }
   }
   .Login {
-    margin-left: -455px;
-    width: 300px;
-    margin-top: -100px;
+    margin-left: -435px;
+    width: 250px;
+    height: 200px ;
+    margin-top: -120px;
+    p {
+      font-size: 12px;
+    }
     .username{
-      width: 250px;
+      position: relative;
+      top: 40px;
+      width: 200px;
+      height: 30px;
     }
     .password {
-      width: 250px;
+      position: relative;
+      top: 55px;
+      width: 200px;
+      height: 30px;
     }
     button {
-      width: 250px;
+      position: relative;
+      top: 65px;
+      width: 200px;
+      height: 30px;
     }
     ul {
       li {
-        font-size: 12px;
         position: relative;
-        left: -25px;
+        left: -75px;
+        top: 10px;
         a{
-          font-size: 10px;
+          font-size: 9px;
+          color: white;
         }
+      }
+    }
+  }
+  .grid-container1 {
+    .paragraph-search {
+      font-size: 12px;
+      margin-left: -30px;
+    }
+    .inputan-search{
+      label {
+        input {
+          width: 150px;
+          margin-left: -110px;
+        } 
+      } 
+    } 
+    img {
+      margin-left: -40px;
+    }
+  }
+  .item-2 {
+    .text-halaman1 {
+      width: 310px;
+      font-size: 20px;
+      margin-left: -190px;
+    }
+  }
+  .contact {
+    margin-top: 20px;
+  }
+  .grid-container {
+    .item-informasi {
+      .text-title {
+        position: relative;
+        left: -20px;
+      }
+    }
+    .contact2 {
+      label {
+        input {
+          margin-left: -175px;
+          max-width: 300px;
+        }
+        ::placeholder {
+          color: white;
+        }
+        textarea {
+          margin-left: -175px;
+          width: 100px;
+          max-width: 300px;
+        }
+        button {
+          margin-left: -175px;
+          width: 100px;
+          max-width: 300px;
+        }
+      }
+    }
+    .grid-alamat {
+      iframe {
+        width: 340px;
+        position: relative;
+        left: 265px;
+      }
+      .alamat-1 {
+        position: relative;
+        left: 155px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .alamat-2 {
+        font-size: 20px;
+        width: 300px;
+        position: relative;
+        left: 345px;
+      }
+    }
+  }
+  .item-2 {
+    .header-title-article {
+      font-size: 23px;
+      margin-left: -90px;
+      margin-bottom: 20px;
+    }
+    .img-olahraga{
+      margin-left: -174px;
+      width: 300px;
+      height: 200px;
+    }
+    .paraghragh-text {
+      font-size: 20px;
+      width: 300px;
+      margin-left: -170px;
+      margin-bottom: 20px;
+    }
+    ol {
+      .header-li {
+        font-size: 16px;
+        margin-left: -200px;
+      }
+      p {
+        width: 300px;
+        font-size: 14px;
+        margin-left: -200px;
+      }
+    }
+    .pushup3 {
+      p {
+        width: 290px;
+        font-size: 18px;
+        margin-bottom: 10px;
+
+      }
+    }
+    .text-bulutangkis {
+      li {
+        margin-top: 20px;
+        font-size: 14px;
+        width: 300px;
+        margin-left: -50px;
+      }
+    }
+  }
+  .text-form3 {
+    label {
+      p {
+        margin-left: -44px;
+      }
+      textarea {
+        margin-left: -44px;
+        width: 300px;
+        height: 70px;
+      } 
+      button {
+        margin-left: -44px;
+        width: 300px;
+        height: 30px;
       }
     }
   }
