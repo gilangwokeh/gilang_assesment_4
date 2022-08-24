@@ -26,7 +26,7 @@ const Masuk2 = () => {
       username : username,
       password : password
     }
-    axios.post("http://localhost:8000/api/users/login-user", data)
+    axios.post("http://103.171.84.194/api/users/login-user", data)
     .then(login=>{
       if(login){
         localStorage.setItem('token',login.data.token)
