@@ -26,11 +26,6 @@ nav li {
   list-style: none;
 }
 
-nav li:hover > a {
-  background: #eee;
-  color: #333;
-}
-
 nav li > ul {
   display: none;
   position: absolute;
@@ -45,7 +40,7 @@ nav li:hover > ul li {
   list-style: none;
   padding-bottom: 10px;
   background-color: black;
-  width: 147px;
+  width: 143px;
   text-align: center;
   cursor: pointer;
   position: relative;
@@ -53,10 +48,15 @@ nav li:hover > ul li {
   z-index: 999;
 }
 
+.nav_item a:hover {
+  background-color: white;
+  color: black;
+  z-index: 999;
+}
+
 nav li:hover > ul a {
   text-decoration: none;
-  color: #eee;
-  background-color: #333;
+  color: white;
 }
 
 nav .nav_link {
@@ -68,11 +68,6 @@ nav .nav_link {
   text-decoration: none;
   transition: all 0.3s;
   white-space: nowrap;
-}
-
-.nav_link:hover {
-  cursor: pointer;
-  color: rgb(182, 7, 7);
 }
 
 .nav {
@@ -169,7 +164,7 @@ nav .nav_link {
     top: 65px;
     right: 0;
     width: 40%;
-    height: 100vh;
+    height: 200px;
     background-color: rgb(10, 11, 12);
     flex-direction: column;
     border-radius: 10px;
@@ -179,8 +174,11 @@ nav .nav_link {
     margin-left: 50px;
   }
   .nav_menu2 {
-    width: 200px;
-    top: 83px;
+    position: fixed;
+    top: 135px;
+    right: 0;
+    width: 50%;
+    height: 610px;
   }
   .nav_menu2 a {
     position: relative;
@@ -196,10 +194,10 @@ nav .nav_link {
   }
   .nav_menu {
     position: fixed;
-    top: 65px;
+    top: 45px;
     right: 0;
     width: 40%;
-    height: 240px;
+    height: 200px;
     background-color: rgb(10, 11, 12);
     flex-direction: column;
     border-radius: 10px;
@@ -207,5 +205,12 @@ nav .nav_link {
   .nav_menu li a {
     margin-bottom: -20px;
     margin-left: 50px;
+  }
+  .nav_menu2 {
+    position: fixed;
+    top: 125px;
+    right: 0;
+    width: 50%;
+    height: 610px;
   }
 }/*# sourceMappingURL=index.css.map */

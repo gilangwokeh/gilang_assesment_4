@@ -15,7 +15,7 @@ const Pendaftaran2 = () => {
       password: password,
       NoTelp: NoTelp
     }
-    const urlPost = "http://103.171.84.194/api/users/register-user"
+    const urlPost = "http://localhost:8000/api/users/register-user"
     await axios.post(urlPost, _user,)
       .then((res) => { console.log("succes send data") })
       .catch(err => { console.log(err) });
