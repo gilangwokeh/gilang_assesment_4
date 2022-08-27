@@ -1,4 +1,5 @@
-APP_DB="isi your database"
-APP_PORT = number
+APP_DB="mongodb://127.0.0.1:27017/BLOGG"
+APP_PORT = 8000
 APP_SECRET="qwertyuiop"
 ORIGINS="http://localhost:3000"
+
